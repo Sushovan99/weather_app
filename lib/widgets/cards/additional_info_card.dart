@@ -4,13 +4,13 @@ class AdditionalInfoCard extends StatelessWidget {
   const AdditionalInfoCard({
     super.key,
     required this.icon,
-    required this.cardText,
     required this.label,
+    required this.value,
   });
 
   final IconData icon;
-  final String cardText;
-  final double label;
+  final String label;
+  final String value;
 
   @override
   Widget build(BuildContext context) {
@@ -23,12 +23,12 @@ class AdditionalInfoCard extends StatelessWidget {
         const SizedBox(
           height: 10,
         ),
-        Text(cardText),
+        Text(label),
         const SizedBox(
           height: 10,
         ),
         Text(
-          "$label",
+          value,
           style: const TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 17,
